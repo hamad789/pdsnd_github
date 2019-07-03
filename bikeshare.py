@@ -10,7 +10,8 @@ MONTH_LIST = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 
 DAY_LIST = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
-# prints 5 rows of the dataframe/Series
+# prints 5 rows of the Dataframe/Series
+
 def print_head(data):
     isprint = input('\nWould you like to have 5 top rows of data printed (yes/no) ? :\n')
     i=0
@@ -91,7 +92,7 @@ def load_data(city, month, day):
 
     # Filtering datasets:
 
-    """ 2. Creating mask to filter dataframes rows We use month_name() and day_name() 
+    """ 1. Creating mask to filter dataframes rows We use month_name() and day_name() 
         from pandas to filter the the data by entered month and day
     """
     mask = None 
