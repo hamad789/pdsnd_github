@@ -10,7 +10,8 @@ MONTH_LIST = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 
 DAY_LIST = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
-# prints 5 rows of the dataframe/Series
+# prints 5 rows of the Dataframe/Series
+
 def print_head(data):
     isprint = input('\nWould you like to have 5 top rows of data printed (yes/no) ? :\n')
     i=0
@@ -91,7 +92,7 @@ def load_data(city, month, day):
 
     # Filtering datasets:
 
-    """ 2. Creating mask to filter dataframes rows We use month_name() and day_name() 
+    """ 1. Creating mask to filter dataframes rows We use month_name() and day_name() 
         from pandas to filter the the data by entered month and day
     """
     mask = None 
@@ -117,7 +118,6 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-
     # display the most common month - we use value_counts() method to count unique values in 
     # pandas Series which are then sorted 
     result = df['Start Time'].dt.month.value_counts().sort_values(ascending=False)
@@ -134,7 +134,6 @@ def time_stats(df):
     print('\nMost Common Start Hour:\n%i' % (result.index[0]))
     print_head(result)
 
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -150,12 +149,10 @@ def station_stats(df):
     print('\nMost Commonly Used Start Station:\n%s' % (result.index[0]))
     print_head(result)
 
-
     # display most commonly used end station
     result = df['End Station'].value_counts().sort_values(ascending=False)
     print('\nMost Commonly Used End Station:\n%s' % (result.index[0]))
     print_head(result)
-
 
     # display most frequent combination of start station and end station trip
     result = df.groupby(['Start Station', 'End Station'])['id'].nunique().sort_values(ascending=False)
@@ -164,7 +161,6 @@ def station_stats(df):
     print('\nMost Frequent Combination of Start Station and End Station Trip:\n\'%s\' and \'%s\'' \
                     % (start_end_station[0], start_end_station[1]))
     print_head(result)
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -203,7 +199,6 @@ def user_stats(df):
         print('\nCounts of Gender:')
         print(df['Gender'].value_counts().to_dict())
 
-
     # Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns:                  #washington data does not have a Birth Year column
         earliest    = df['Birth Year'].min()
@@ -215,7 +210,6 @@ def user_stats(df):
                                     % (earliest, most_recent, most_common))
         print_head(result_most_common)
 
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -224,8 +218,13 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
+<<<<<<< HEAD
 
         time_stt_stats(df)
+=======
+        time_stats(df)
+        station_stats(df)
+>>>>>>> refactoring
         trip_duration_stats(df)
         user_stats(df)
 
