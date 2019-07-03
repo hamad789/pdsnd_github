@@ -5,7 +5,7 @@
 BikeShare
 
 ### Description
-The project encompasses analysis of the bikeshare systems of three major U.S. cities: New York, Washigton DC and Chicago. The analysis conducted using statistical methods to analyze bikeshare usage by the residents of these cities.
+The project encompasses analysis of the bikeshare systems of three major U.S. cities: New York, Washigton DC and Chicago. The analysis has been conducted using descriptive statistics to summarize the bikeshare usage by the residents of these cities.
 
 
 ### Files used
