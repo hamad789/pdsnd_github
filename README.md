@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+3.07.2019
 
 ### Project Title
-Replace the Project Title
+BikeShare
 
 ### Description
-Describe what your project is about and what it does
+The project encompasses analysis of the bikeshare systems of three major U.S. cities: New York, Washigton DC and Chicago. The analysis conducted using statistical methods to analyze bikeshare usage by the residents of these cities.
+
 
 ### Files used
-Include the files used
+bikeshare.py
+washington.csv
+new_york_city.csv
+chicago.csv
+readme.txt
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://github.com/udacity/pdsnd_github/
